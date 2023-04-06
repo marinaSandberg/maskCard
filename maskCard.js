@@ -1,28 +1,28 @@
 function maskCard() {
 
     // Pick up card number
-   let cardNumberInput = document.querySelector("#input");
-       let cardNumber = cardNumberInput.value;
+    let cardNumberInput = document.querySelector("#input");
+    let cardNumber = cardNumberInput.value;
 
-       if (cardNumber.length > 6 ) {
-           // Select first character
-           let first = cardNumber.substring(0,1);
+    if (cardNumber.length > 6 ) {
+        // Select first character
+        let first = cardNumber.substring(0,1);
 
-           // Select rest card charaters and replace all numbers but the last 4
-           let maskedNumbers = cardNumber.substring(1).replace(/[0-9](?=.{4})/g,"*");
+        // Select rest card charaters and replace all numbers but the last 4
+        let maskedNumbers = cardNumber.substring(1).replace(/[0-9](?=.{4})/g,"*");
 
-           // Concatenate the masked string
-           let maskedCard = first.concat(maskedNumbers);
+        // Concatenate the masked string
+        let maskedCard = first.concat(maskedNumbers);
 
-           // Export masked card
-           cardNumberInput.value = maskedCard;
-           console.log(maskedCard);
-       }
-       
-       // If the number is short
-       else {
-           cardNumberInput.value = cardNumber;
-       }
+        // Export masked card
+        cardNumberInput.value = maskedCard;
+        console.log(maskedCard);
+    }
+    
+    // If the number is short
+    else {
+        cardNumberInput.value = cardNumber;
+    }
 
    // ----------2nd way----------
 

@@ -8,63 +8,71 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="./maskCard.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Mask Card</title>
-    <style>
-        body {
-            margin: none;
-            padding-top: 20px;
-            text-decoration: none;
-            background-color: rgb(193, 182, 135);
-            box-sizing: border-box;
-            font-family: 'Roboto Condensed', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h2 {
-            font-size: 12px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        input {
-            padding: 5px;
-            width: 200px;
-            margin-bottom: 10px;
-        }
-
-        input:focus {
-            outline: none;
-        }
-
-       input[type=button] {
-            padding: 5px;
-            width: 100px;
-            margin-top: 20px;
-            background-color: rgb(132, 132, 119);
-            border: solid thin;
-        }
-
-        input[type=button]:hover{
-            scale: 1.1;
-        }
-
-    </style>
 </head>
 <body>
     <h1>Insert Card Credentials</h1>
     <form>
         <h2>Name on card</h2>
-        <input type="text">
+        <input type="text" placeholder="John Doe">
         <h2>Credit card</h2>
-        <input id="input" type="text">
-        <h2>Expiration date</h2>
-        <input type="date" value="2023-01-01" oninput="maskCard()">
+        <input id="input" type="text" placeholder="1234 5678 9012 3456" onblur="maskCard()">
+        <section>
+            <div>
+                <h2>Expiration date</h2>
+                <label for="date">
+                    <select name="day" id="">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="year" id="">
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </label> 
+            </div>
+            <div>
+                <h2>CVC</h2>
+                <input type="text" id="cvc" placeholder="123">
+            </div>
+        </section>
+
         <input type="button" onclick="Reset()" value="Apply">
     </form>
 </body>
