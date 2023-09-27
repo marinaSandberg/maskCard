@@ -1,7 +1,7 @@
 <h1>Mask Card Numbers</h1>
 
 <h2>Description</h2>
-Mask the 1st and the last 4 numbers. Excludes letters.
+Mask the 1st and the last 4 numbers of credit card number. Excludes letters.
 <br />
 
 
